@@ -27,4 +27,9 @@ io.on("connection", function (socket) {
       lngkejadian: data.lng_kejadian,
     });
   });
+  socket.on("update_status", function (data) {
+    io.sockets.emit("update_status", {
+      data: data,
+    });
+  });
 });
