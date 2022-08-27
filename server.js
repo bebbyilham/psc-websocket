@@ -32,4 +32,14 @@ io.on("connection", function (socket) {
       data: data,
     });
   });
+  socket.on("bantuan_notification", function (data) {
+    io.sockets.emit("bantuan_notification", {
+      data: data,
+    });
+  });
+  socket.on("update_status_bantuan", function (data) {
+    io.sockets.emit("update_status_bantuan", {
+      data: data,
+    });
+  });
 });
